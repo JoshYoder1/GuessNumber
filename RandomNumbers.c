@@ -8,6 +8,7 @@ int main(){
 	char name[20];
 	int correct;
 	int guess;
+	int KeepGoing = 0;
 	srand(time(NULL));
 
 	printf("What is your name? ");
@@ -17,7 +18,12 @@ int main(){
 	correct = (rand() % 100)+1;
 	printf("The number is: %d \n",correct);
 	
-//	while
+	while(KeepGoing == 0){
+		printf("Guess a number: ");
+		scanf("%d", guess);
+		printf("You guessed %d \n", guess);
+		KeepGoing = 1;
+	}
 
 	return 0;
 }
